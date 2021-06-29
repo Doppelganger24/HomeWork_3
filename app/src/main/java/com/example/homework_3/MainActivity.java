@@ -25,6 +25,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button buttonSeven;
     Button buttonEight;
     Button buttonNine;
+    Button divide;
+    Button multiply;
+    Button enter;
+    Button minus;
+    Button plus;
+    Button dot;
 
     TextView textNumber;
 
@@ -53,7 +59,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         buttonEight.setOnClickListener(this);
         buttonNine = findViewById(R.id.button_9);
         buttonNine.setOnClickListener(this);
+        divide = findViewById(R.id.button_divide);
+        divide.setOnClickListener(this);
+        multiply = findViewById(R.id.button_multiply);
+        multiply.setOnClickListener(this);
+        enter = findViewById(R.id.button_equal);
+        enter.setOnClickListener(this);
+        minus = findViewById(R.id.button_minus);
+        minus.setOnClickListener(this);
+        plus = findViewById(R.id.button_plus);
+        plus.setOnClickListener(this);
+        dot = findViewById(R.id.button_dot);
+        dot.setOnClickListener(this);
+
         textNumber = findViewById(R.id.Numbers);
+
     }
 
 
@@ -91,6 +111,24 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.button_9:
                 textNumber.append("9");
                 break;
+            case R.id.button_divide:
+                textNumber.append("/");
+                break;
+            case R.id.button_multiply:
+                textNumber.append("x");
+                break;
+            case R.id.button_plus:
+                textNumber.append("+");
+                break;
+            case R.id.button_minus:
+                textNumber.append("-");
+                break;
+            case R.id.button_equal:
+                break;
+            case R.id.button_dot:
+                textNumber.append(".");
+                break;
+
         }
 
     }
