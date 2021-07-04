@@ -13,7 +13,7 @@
         app:srcCompat="@drawable/trees" />
 
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button_1"
         android:layout_width="@dimen/widthButton"
         android:layout_height="wrap_content"
