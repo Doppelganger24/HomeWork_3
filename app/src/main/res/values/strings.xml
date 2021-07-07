@@ -17,4 +17,6 @@
     <string name="dot">.</string>
     <string name="_0">0</string>
     <string name="delete">ᗕ</string>
+    <string name="dark">Dark</string>
+    <string name="light">Light</string>
 </resources>

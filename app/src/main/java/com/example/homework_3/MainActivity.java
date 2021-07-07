@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ComponentActivity;
 
 import android.annotation.SuppressLint;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.os.PersistableBundle;
@@ -42,7 +43,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTheme(convertCodeTheme(getAppTheme()));
         setContentView(R.layout.activity_main);
+        allButtons();
+        textNumber = findViewById(R.id.Numbers);
+        initChanger();
+    }
+
+    private void allButtons() {
         buttonZero = findViewById(R.id.button_0);
         buttonZero.setOnClickListener(this);
         buttonOne = findViewById(R.id.button_1);
@@ -75,9 +83,55 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         plus.setOnClickListener(this);
         dot = findViewById(R.id.button_dot);
         dot.setOnClickListener(this);
+    }
 
-        textNumber = findViewById(R.id.Numbers);
+    private int myCoolStyle = 0;
+    private final int darkTheme = 1;
+    private final int lightTheme = 2;
+    private String keyMode = "key";
+    private String keyTheme = "theme";
 
+    private void initChanger() {
+        Button lightButton = findViewById(R.id.buttonLight);
+        lightButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SharedPreferences sp = getSharedPreferences(keyMode, MODE_PRIVATE);
+                SharedPreferences.Editor editor = sp.edit();
+                editor.putInt(keyTheme, 2);
+                editor.apply();
+                recreate();
+            }
+        });
+        Button darkButton = findViewById(R.id.buttonDark);
+        darkButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                SharedPreferences sp = getSharedPreferences(keyMode, MODE_PRIVATE);
+                SharedPreferences.Editor editor = sp.edit();
+                editor.putInt(keyTheme, 1);
+                editor.apply();
+                recreate();
+            }
+        });
+    }
+
+    private int convertCodeTheme(int codeStyle) {
+        switch (codeStyle) {
+            case darkTheme:
+                return R.style.DarkTheme;
+            case lightTheme:
+                return R.style.LightTheme;
+            default:
+                return R.style.MyCoolStyle;
+
+        }
+    }
+    private int getAppTheme () {
+        int codeStyle = myCoolStyle;
+        SharedPreferences sharedPreferences = getSharedPreferences(keyMode,codeStyle);
+        return sharedPreferences.getInt(keyTheme,codeStyle);
     }
 
 
