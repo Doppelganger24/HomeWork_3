@@ -45,11 +45,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setTheme(convertCodeTheme(getAppTheme()));
         setContentView(R.layout.activity_main);
         allButtons();
         textNumber = findViewById(R.id.Numbers);
-        initChanger();
+
     }
 
     private void allButtons() {
@@ -90,54 +89,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
-    private int myCoolStyle = 0;
-    private final int darkTheme = 1;
-    private final int lightTheme = 2;
-    private final String keyMode = "key";
-    private final String keyTheme = "theme";
-
-    private void initChanger() {
-        Button lightButton = findViewById(R.id.buttonLight);
-        lightButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                SharedPreferences sp = getSharedPreferences(keyMode, MODE_PRIVATE);
-                SharedPreferences.Editor editor = sp.edit();
-                editor.putInt(keyTheme, 2);
-                editor.apply();
-                recreate();
-            }
-        });
-        Button darkButton = findViewById(R.id.buttonDark);
-        darkButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                SharedPreferences sp = getSharedPreferences(keyMode, MODE_PRIVATE);
-                SharedPreferences.Editor editor = sp.edit();
-                editor.putInt(keyTheme, 1);
-                editor.apply();
-                recreate();
-            }
-        });
-    }
-
-    private int convertCodeTheme(int codeStyle) {
-        switch (codeStyle) {
-            case darkTheme:
-                return R.style.DarkTheme;
-            case lightTheme:
-                return R.style.LightTheme;
-            default:
-                return R.style.MyCoolStyle;
-
-        }
-    }
-    private int getAppTheme () {
-        int codeStyle = myCoolStyle;
-        SharedPreferences sharedPreferences = getSharedPreferences(keyMode,codeStyle);
-        return sharedPreferences.getInt(keyTheme,codeStyle);
-    }
 
 
     @SuppressLint("NonConstantResourceId")
