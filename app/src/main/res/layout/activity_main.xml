@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    >
 
 
     <ImageView
@@ -27,9 +28,8 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.8"
         app:layout_constraintVertical_chainStyle="packed"
-        android:fontFamily="@font/new_font"
-        android:textStyle="bold"
-        android:textColor="@color/black"/>
+        style="@style/MyCoolStyle"
+        />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button_4"
@@ -42,9 +42,7 @@
         app:layout_constraintEnd_toStartOf="@id/button_5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/button_1"
-        android:fontFamily="@font/new_font"
-        android:textStyle="bold"
-        android:textColor="@color/black"/>
+        style="@style/MyCoolStyle"/>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button_7"
@@ -57,9 +55,7 @@
         app:layout_constraintEnd_toStartOf="@id/button_8"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/button_4"
-        android:fontFamily="@font/new_font"
-        android:textStyle="bold"
-        android:textColor="@color/black"/>
+        style="@style/MyCoolStyle"/>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button_2"
@@ -74,9 +70,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.8"
         app:layout_constraintVertical_chainStyle="packed"
-        android:fontFamily="@font/new_font"
-        android:textStyle="bold"
-        android:textColor="@color/black"/>
+        style="@style/MyCoolStyle"/>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button_5"
@@ -89,9 +83,7 @@
         app:layout_constraintEnd_toStartOf="@id/button_6"
         app:layout_constraintStart_toEndOf="@id/button_4"
         app:layout_constraintTop_toBottomOf="@id/button_2"
-        android:fontFamily="@font/new_font"
-        android:textStyle="bold"
-        android:textColor="@color/black"/>
+        style="@style/MyCoolStyle"/>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button_8"
@@ -104,9 +96,7 @@
         app:layout_constraintEnd_toStartOf="@id/button_9"
         app:layout_constraintStart_toEndOf="@id/button_7"
         app:layout_constraintTop_toBottomOf="@id/button_5"
-        android:fontFamily="@font/new_font"
-        android:textStyle="bold"
-        android:textColor="@color/black"/>
+        style="@style/MyCoolStyle"/>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button_0"
@@ -119,9 +109,7 @@
         app:layout_constraintEnd_toStartOf="@id/button_dot"
         app:layout_constraintStart_toEndOf="@id/button_delete"
         app:layout_constraintTop_toBottomOf="@id/button_8"
-        android:fontFamily="@font/new_font"
-        android:textStyle="bold"
-        android:textColor="@color/black"/>
+        style="@style/MyCoolStyle"/>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button_3"
@@ -136,9 +124,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.8"
         app:layout_constraintVertical_chainStyle="packed"
-        android:fontFamily="@font/new_font"
-        android:textStyle="bold"
-        android:textColor="@color/black"/>
+        style="@style/MyCoolStyle"/>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button_6"
@@ -151,9 +137,7 @@
         app:layout_constraintEnd_toStartOf="@id/button_multiply"
         app:layout_constraintStart_toEndOf="@id/button_5"
         app:layout_constraintTop_toBottomOf="@id/button_3"
-        android:fontFamily="@font/new_font"
-        android:textStyle="bold"
-        android:textColor="@color/black"/>
+        style="@style/MyCoolStyle"/>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button_9"
@@ -166,9 +150,7 @@
         app:layout_constraintEnd_toStartOf="@id/button_minus"
         app:layout_constraintStart_toEndOf="@id/button_8"
         app:layout_constraintTop_toBottomOf="@id/button_6"
-        android:fontFamily="@font/new_font"
-        android:textStyle="bold"
-        android:textColor="@color/black"/>
+        style="@style/MyCoolStyle"/>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button_delete"
@@ -181,9 +163,7 @@
         app:layout_constraintEnd_toStartOf="@id/button_0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/button_7"
-        android:fontFamily="@font/new_font"
-        android:textStyle="bold"
-        android:textColor="@color/black"/>
+        style="@style/MyCoolStyle"/>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button_plus"
@@ -196,9 +176,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/button_dot"
         app:layout_constraintTop_toBottomOf="@id/button_minus"
-        android:fontFamily="@font/new_font"
-        android:textStyle="bold"
-        android:textColor="@color/black"/>
+        style="@style/MyCoolStyle"/>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button_equal"
@@ -213,9 +191,7 @@
         app:layout_constraintStart_toStartOf="@+id/button_delete"
         app:layout_constraintTop_toBottomOf="@+id/button_0"
         app:layout_constraintVertical_bias="0.033"
-        android:fontFamily="@font/new_font"
-        android:textStyle="bold"
-        android:textColor="@color/black"/>
+        style="@style/MyCoolStyle"/>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button_minus"
@@ -228,9 +204,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/button_9"
         app:layout_constraintTop_toBottomOf="@id/button_multiply"
-        android:fontFamily="@font/new_font"
-        android:textStyle="bold"
-        android:textColor="@color/black"/>
+        style="@style/MyCoolStyle"/>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button_multiply"
@@ -243,9 +217,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/button_6"
         app:layout_constraintTop_toBottomOf="@id/button_divide"
-        android:fontFamily="@font/new_font"
-        android:textStyle="bold"
-        android:textColor="@color/black"/>
+        style="@style/MyCoolStyle"/>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button_divide"
@@ -260,9 +232,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.8"
         app:layout_constraintVertical_chainStyle="packed"
-        android:fontFamily="@font/new_font"
-        android:textStyle="bold"
-        android:textColor="@color/black"/>
+        style="@style/MyCoolStyle"/>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button_dot"
@@ -275,9 +245,7 @@
         app:layout_constraintEnd_toStartOf="@id/button_plus"
         app:layout_constraintStart_toEndOf="@id/button_0"
         app:layout_constraintTop_toBottomOf="@id/button_9"
-        android:fontFamily="@font/new_font"
-        android:textStyle="bold"
-        android:textColor="@color/black"/>
+        style="@style/MyCoolStyle"/>
 
     <TextView
         android:id="@+id/Numbers"
@@ -290,8 +258,7 @@
         app:layout_constraintEnd_toEndOf="@+id/imageView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imageView"
-        android:fontFamily="@font/new_font"
-        android:textStyle="bold"
+        style="@style/MyCoolStyle"
         />
 
 
