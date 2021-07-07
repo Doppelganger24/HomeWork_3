@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ComponentActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Parcelable;
@@ -36,6 +37,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button minus;
     Button plus;
     Button dot;
+    Button Options;
 
     TextView textNumber;
 
@@ -83,13 +85,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         plus.setOnClickListener(this);
         dot = findViewById(R.id.button_dot);
         dot.setOnClickListener(this);
+        Options = findViewById(R.id.Options);
+        Options.setOnClickListener(this);
+
     }
 
     private int myCoolStyle = 0;
     private final int darkTheme = 1;
     private final int lightTheme = 2;
-    private String keyMode = "key";
-    private String keyTheme = "theme";
+    private final String keyMode = "key";
+    private final String keyTheme = "theme";
 
     private void initChanger() {
         Button lightButton = findViewById(R.id.buttonLight);
@@ -138,6 +143,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @SuppressLint("NonConstantResourceId")
     @Override
     public void onClick(View v) {
+        Intent intent;
         switch (v.getId()) {
             case R.id.button_0:
                 textNumber.append("0");
@@ -187,7 +193,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.button_dot:
                 textNumber.append(".");
                 break;
-
+            case R.id.Options:
+                intent = new Intent(this,Options.class);
+                startActivity(intent);
+                break;
         }
 
     }
